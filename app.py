@@ -6,7 +6,7 @@ WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwqr8zy1rzejW3v0_RB0kPMm2
 
 st.set_page_config(page_title="Тест з фізики для 8 класу", page_icon="⚡", layout="wide")
 
-st.title("⚡ Тест з фізики: Світлові явища. Джерела та приймачі світла")
+st.title("⚡ Тест з фізики для 8 класу: Світлові явища. Джерела та приймачі світла")
 st.write("### Нова українська школа — Перевірка знань")
 
 # 1. РЕЄСТРАЦІЯ УЧНЯ
