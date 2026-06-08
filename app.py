@@ -1,8 +1,9 @@
 import streamlit as st
 import requests
 
-# НАЛАШТУВАННЯ СИСТЕМИ (Посилання на вашу нову таблицю 8 класу)
-WEB_APP_URL = "https://script.google.com/macros/s/AKfycbygSpUoZENO26KtOXV1RkKON81STgu3mXab6_8xYTfaF0DRrKY1skybmbD-V293mMC13Q/exec"
+# НАЛАШТУВАННЯ СИСТЕМИ (Ваше робоче посилання 8 класу)
+WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwqr8zy1rzejW3v0_RB0kPMm28qjtk-S3b8LfMehsjcYZKpJeiN7mZzkEKVzIaslM5W/exec"
+
 st.set_page_config(page_title="Тест з фізики для 8 класу", page_icon="⚡", layout="wide")
 
 st.title("⚡ Тест з фізики: Світлові явища. Джерела та приймачі світла")
@@ -19,7 +20,6 @@ with col2:
 with col3:
     klas = st.text_input("Клас (напр., 8-A)", key="kl").strip()
 
-# Масив для відповідей та лічильник балів
 answers = {}
 score = 0
 
@@ -126,45 +126,33 @@ answers['q12'] = q12
 if q12 == "300 000 км/с":
     score += 1
 
-
-# --- КНОПКА ЗАВЕРШЕННЯ ТА ВІДПРАВКИ ---
+# --- КНОПКА ЗАВЕРШЕННЯ ---
 st.divider()
 if st.button("🚀 Завершити тест та відправити результати", type="primary"):
     if not prizvysche or not imya or not klas:
         st.error("❌ Будь ласка, заповніть свої Прізвище, Ім'я та Клас вгорі сторінки!")
     else:
-        # Розрахунок підсумкової оцінки від 1 до 12
         final_score = int(round(score))
         if final_score < 1:
             final_score = 1
 
-        # Формування пакету даних для відправки в Google Таблицю
         payload = {
             "prizvysche": prizvysche,
             "imya": imya,
             "klas": klas,
             "ocinka": final_score,
-            "q1": answers.get('q1', ''),
-            "q2": answers.get('q2', ''),
-            "q3": answers.get('q3', ''),
-            "q4": answers.get('q4', ''),
-            "q5": answers.get('q5', ''),
-            "q6": answers.get('q6', ''),
-            "q7": answers.get('q7', ''),
-            "q8": answers.get('q8', ''),
-            "q9": answers.get('q9', ''),
-            "q10": answers.get('q10', ''),
-            "q11": answers.get('q11', ''),
-            "q12": answers.get('q12', '')
+            "q1": answers.get('q1', ''), "q2": answers.get('q2', ''), "q3": answers.get('q3', ''),
+            "q4": answers.get('q4', ''), "q5": answers.get('q5', ''), "q6": answers.get('q6', ''),
+            "q7": answers.get('q7', ''), "q8": answers.get('q8', ''), "q9": answers.get('q9', ''),
+            "q10": answers.get('q10', ''), "q11": answers.get('q11', ''), "q12": answers.get('q12', '')
         }
 
-        # Процес відправки
         try:
             response = requests.post(WEB_APP_URL, json=payload, timeout=10)
             if response.status_code == 200:
-                st.success(f"🎉 Тест успішно завершено! Ваша оцінка: {final_score} балів. Результати внесено в журнал.")
+                st.success(f"🎉 Тест успішно завершено! Ваша оцінка: {final_score} балів.")
                 st.balloons()
             else:
-                st.error("❌ Сталася помилка при збереженні даних на сервері Google. Спробуйте ще раз.")
+                st.error("❌ Помилка сервера Google.")
         except Exception as e:
-            st.error("❌ Не вдалося зв'язатися з електронним журналом. Перевірте з'єднання з інтернетом.")
+            st.error("❌ Помилка з'єднання.")
