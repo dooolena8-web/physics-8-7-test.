@@ -3,7 +3,7 @@ import requests
 
 # НАЛАШТУВАННЯ СИСТЕМИ (Посилання на вашу нову таблицю 8 класу)
 # Перевірте, щоб тут у лапках стояло актуальне посилання на веб-додаток Apps Script
-WEB_APP_URL = "https://script.google.com/macros/s/AKfycbz_ваше_нове_посилання_від_8_класу/exec"
+WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwqr8zY1rzejW3v0_RB0kPMm28qJtk-S3b8LfMehSjcYZkPJeiN7mZzkEX1liIsQeN0ZQ/exec"
 
 st.set_page_config(page_title="Тест з фізики для 8 класу", page_icon="⚡", layout="wide")
 
