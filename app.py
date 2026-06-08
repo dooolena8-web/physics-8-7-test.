@@ -3,8 +3,7 @@ import requests
 
 # НАЛАШТУВАННЯ СИСТЕМИ (Посилання на вашу нову таблицю 8 класу)
 WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyk6mrh7FsDDpxIsrZRTl5vpOAxiJnOfDKOeEEVwGDZHPIxQoxaJdIGcyg3K4dgk-zkXw/exec"
-
-st.set_page_config(page_title="Тест з фізики для 8 класу", page_icon="⚡", layout="wide")
+st.set_page_config(page_title="Тест з фізики для 8 класу", page_icon="⚡", layout="wide"
 
 st.title("⚡ Тест з фізики: Світлові явища. Джерела та приймачі світла")
 st.write("### Нова українська школа — Перевірка знань")
