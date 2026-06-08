@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # НАЛАШТУВАННЯ СИСТЕМИ (Посилання на вашу нову таблицю 8 класу)
-WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwqr8zy1rzejW3v0_RB0kPMm28qjtk-S3b8LfMehsjcYZKpJeiN7mZzkEKVzIaslM5W/exec"
+WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyk6mrh7FsDDpxIsrZRTl5vpOAxiJnOfDKOeEEVwGDZHPIxQoxaJdIGcyg3K4dgk-zkXw/exec"
 
 st.set_page_config(page_title="Тест з фізики для 8 класу", page_icon="⚡", layout="wide")
 
