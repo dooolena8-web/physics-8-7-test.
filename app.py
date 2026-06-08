@@ -3,7 +3,7 @@ import requests
 
 # НАЛАШТУВАННЯ: Вставте сюди ваше копійоване посилання на Google Apps Script Web App
 # Адреса обов'язково має починатися з script.google.com та закінчуватися на /exec
-WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwq-9mxoAkxY8epZOH_8bZN83oBKUn0HfxVZ7_7FUCZwEaiMjkOeDkkF998uR1iClkxOg/exec"
+WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwqr8zY1rzejW3v0_RB0kPMm28qJtk-S3b8LfMehSjcYZkPJeiN7mZzkEX1liIsQeN0ZQ/exec"
 
 st.set_page_config(page_title="Тест з фізики: 8 клас", layout="centered")
 
