@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # НАЛАШТУВАННЯ СИСТЕМИ (Ваше перевірене робоче посилання для таблиці 8 класу)
-WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwqr8zy1rzejW3v0_RB0kPMm28qjtk-S3b8LfMehsjcYZKpJeiN7mZzkEKVzIaslM5W/exec"
+WEB_APP_URL = "https://script.google.com/macros/s/AKfycbydXpXGNO1SM9wvsdEDrdbETIasYS8qpDJoNEWm1IbfBT8VmbNCG_hysZxwcY-ii-ngbQ/exec"
 
 st.set_page_config(page_title="Тест з фізики: Енергія (8 клас)", page_icon="🔋", layout="wide")
 
